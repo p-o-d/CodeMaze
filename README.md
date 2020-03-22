@@ -1,0 +1,2 @@
+# CodeMaze
+CodeMaze example project
