@@ -4,5 +4,16 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="internal_logs\**" />
+    <Content Remove="internal_logs\**" />
+    <EmbeddedResource Remove="internal_logs\**" />
+    <None Remove="internal_logs\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\LoggerService\LoggerService.csproj" />
+  </ItemGroup>
+
 
 </Project>

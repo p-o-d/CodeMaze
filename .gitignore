@@ -348,3 +348,7 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+
+# NLog
+/CompanyEmployees/CompanyEmployees/internal_logs
+/CompanyEmployees/CompanyEmployees/logs
