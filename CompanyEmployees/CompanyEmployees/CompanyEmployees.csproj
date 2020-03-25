@@ -6,12 +6,25 @@
 
   <ItemGroup>
     <Compile Remove="internal_logs\**" />
+    <Compile Remove="logs\**" />
     <Content Remove="internal_logs\**" />
+    <Content Remove="logs\**" />
     <EmbeddedResource Remove="internal_logs\**" />
+    <EmbeddedResource Remove="logs\**" />
     <None Remove="internal_logs\**" />
+    <None Remove="logs\**" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Entities\Entities.csproj" />
     <ProjectReference Include="..\LoggerService\LoggerService.csproj" />
   </ItemGroup>
 
