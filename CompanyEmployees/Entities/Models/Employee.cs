@@ -20,9 +20,9 @@ namespace Entities.Models
         [Required(ErrorMessage = "Employee age is required")]
         public int Age { get; set; }
 
-        [ForeignKey(nameof(Company))]
         public Guid CompanyId { get; set; }
 
+        [ForeignKey(nameof(CompanyId))]
         public Company Company { get; set; }
     }
 }

@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Repository;
 
 namespace CompanyEmployees.Extensions
 {
@@ -52,6 +53,13 @@ namespace CompanyEmployees.Extensions
                     builder.MigrationsAssembly(Assembly.GetExecutingAssembly().FullName);
                 });
             });
+
+            return services;
+        }
+
+        public static IServiceCollection ConfigureRepositoryManager(this IServiceCollection services)
+        {
+            services.AddScoped<IRepositoryManager, RepositoryManager>();
 
             return services;
         }

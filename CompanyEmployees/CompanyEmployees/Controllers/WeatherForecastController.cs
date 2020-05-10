@@ -9,10 +9,12 @@ namespace CompanyEmployees.Controllers
     public class WeatherForecastController : ControllerBase
     {
         private readonly ILoggerManager _logger;
+        private readonly IRepositoryManager _repositoryManager;
 
-        public WeatherForecastController(ILoggerManager logger)
+        public WeatherForecastController(ILoggerManager logger, IRepositoryManager repositoryManager)
         {
             _logger = logger;
+            _repositoryManager = repositoryManager;
         }
 
         [HttpGet]
