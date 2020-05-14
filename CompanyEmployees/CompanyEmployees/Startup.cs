@@ -1,5 +1,7 @@
 using System.IO;
+using AutoMapper;
 using CompanyEmployees.Extensions;
+using Entities.MappingProfiles;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpOverrides;
@@ -28,6 +30,8 @@ namespace CompanyEmployees
             services.ConfigureLoggerService();
             services.ConfigureSqlContext(Configuration);
             services.ConfigureLoggerService();
+            services.ConfigureRepositoryManager();
+            services.AddAutoMapper(typeof(MappingProfile));
             services.AddControllers();
         }
 

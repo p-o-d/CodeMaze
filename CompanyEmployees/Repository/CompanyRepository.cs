@@ -1,4 +1,6 @@
-﻿using Entities.Models;
+﻿using System.Collections.Generic;
+using System.Linq;
+using Entities.Models;
 using Contracts;
 using Entities;
 
@@ -8,6 +10,11 @@ namespace Repository
     {
         public CompanyRepository(RepositoryContext context) : base(context)
         {
+        }
+
+        public IEnumerable<Company> GetAllCompanies(bool trackChanges)
+        {
+           return GetAll(trackChanges).OrderBy(company => company.Name).ToList();
         }
     }
 }
