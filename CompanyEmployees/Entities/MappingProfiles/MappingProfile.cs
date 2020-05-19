@@ -11,6 +11,8 @@ namespace Entities.MappingProfiles
             CreateMap<Company, CompanyDto>()
                 .ForMember(dst => dst.FullAddress, 
                     opt => opt.MapFrom(src => string.Join(' ', src.Address, src.Country)));
+
+            CreateMap<Employee, EmployeeDto>();
         }
     }
 }
