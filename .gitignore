@@ -352,3 +352,6 @@ MigrationBackup/
 # NLog
 /CompanyEmployees/CompanyEmployees/internal_logs
 /CompanyEmployees/CompanyEmployees/logs
+
+# Rider
+.idea
