@@ -48,7 +48,7 @@ namespace CompanyEmployees.Extensions
         {
             services.AddDbContext<RepositoryContext>(options =>
             {
-                options.UseSqlServer(configuration.GetConnectionString("sqlConnection"), builder =>
+                options.UseSqlite(configuration.GetConnectionString("sqlConnection"), builder =>
                 {
                     builder.MigrationsAssembly(Assembly.GetExecutingAssembly().FullName);
                 });
